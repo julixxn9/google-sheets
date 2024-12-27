@@ -1,0 +1,117 @@
+ /* Estilos generales */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f3f4;
+  }
+
+  nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    margin-right: 20px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu > li {
+    position: relative;
+    margin-right: 20px;
+  }
+
+  .menu > li a {
+    text-decoration: none;
+    color: #202124;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: block;
+  }
+
+  .menu > li a:hover {
+    background-color: #e8eaed;
+    border-radius: 5px;
+  }
+
+  /* Submenús */
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+  }
+
+  .submenu li {
+    white-space: nowrap;
+  }
+
+  .submenu li a {
+    text-decoration: none;
+    color: #202124;
+    padding: 8px 12px;
+    display: block;
+  }
+
+  .submenu li a:hover {
+    background-color: #e8eaed;
+  }
+
+  /* Mostrar submenús al pasar el cursor */
+  .menu > li:hover > .submenu {
+    display: block;
+  }
+
+  /* Submenús anidados */
+  .submenu li {
+    position: relative;
+  }
+
+  .submenu .submenu {
+    display: none;
+    top: 0;
+    left: 100%;
+    margin-left: 1px;
+  }
+
+  .submenu li:hover > .submenu {
+    display: block;
+  }
+
+  /* Responsivo */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+
+    .menu {
+      flex-direction: column;
+    }
+
+    .menu > li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
